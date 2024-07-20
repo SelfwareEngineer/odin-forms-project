@@ -77,3 +77,69 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+:root {
+  --bone-color: hsl(38, 32%, 85%);
+  --bone-darker: hsl(38, 32%, 65%);
+}
+
+@font-face {
+  font-family: "norse";
+  src:
+    url("fonts/norse-bold-webfont.woff2") format("woff2"),
+    url("fonts/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: url("andreas-brun-0DDf6PJvZIY-unsplash.jpg");
+  background-size: auto 100vh;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#title-container {
+  background-color: hsl(0, 0%, 0%, 50%);
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  margin-top: 25vh;
+}
+
+#odin {
+  height: 90%;
+}
+
+#title {
+  display: inline-block;
+  font: 4em "norse";
+  color: var(--bone-color);
+}
+
+#content {
+  background-color: hsl(210, 20%, 98%);
+  flex: 0 0 63vw;
+}
+
+#shoutout {
+  color: var(--bone-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.5rem;
+}
+
+#shoutout a {
+  color: var(--bone-darker);
+}
