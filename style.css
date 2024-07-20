@@ -81,6 +81,8 @@ h6 {
 :root {
   --bone-color: hsl(38, 32%, 85%);
   --bone-darker: hsl(38, 32%, 65%);
+  --bone-lighter: hsl(38, 32%, 90%);
+  --content-margin-h: 2rem;
 }
 
 @font-face {
@@ -129,11 +131,6 @@ body {
   color: var(--bone-color);
 }
 
-#content {
-  background-color: hsl(210, 20%, 98%);
-  flex: 0 0 63vw;
-}
-
 #shoutout {
   color: var(--bone-color);
   margin-bottom: 0.5rem;
@@ -142,4 +139,38 @@ body {
 
 #shoutout a {
   color: var(--bone-darker);
+}
+
+#content {
+  background-color: hsl(210, 20%, 98%);
+  flex: 0 0 63vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#content > * {
+  padding: 0rem var(--content-margin-h);
+}
+
+#content h3 {
+  font-size: calc(0.45rem + 1vw);
+}
+
+#info {
+  margin: 1rem 0;
+}
+
+#call-to-action {
+  margin-bottom: 2.5rem;
+}
+
+#signup {
+  background-color: white;
+  box-shadow: 0rem 0.7rem 0.3rem -0.5rem hsl(0, 0%, 85%);
+  padding: 1rem var(--content-margin-h);
+}
+
+button {
+  margin-top: calc(0.75 * var(--content-margin-h));
 }
