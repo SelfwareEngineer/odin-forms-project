@@ -244,6 +244,14 @@ button {
   padding: 0.5rem 2.5rem;
 }
 
+button:hover {
+  background-color: hsl(238, 42%, 45%);
+}
+
+button:active {
+  box-shadow: inset 1px 1px 5px 0px hsl(0, 0%, 0%);
+}
+
 #submit-container p {
   margin-top: 1.5rem;
 }
