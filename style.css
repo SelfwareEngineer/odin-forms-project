@@ -49,14 +49,18 @@ select {
 /* input[type="checkbox"], */
 /* input[type="radio"], */
 /* input[type="range"], */
-/* select */
+/* select { */
+/*   appearance: none; */
+/* } */
 
 /*
   6.2. Optional - same as above, but searches have some jank with their x button, 
     so I thought it best to have this one be enabled separately
 */
 
-/* input[type="search"], */
+/* input[type="search"] { */
+/*     appearance: none; */
+/* } */
 
 /*
   7. Avoid text overflows
@@ -82,7 +86,12 @@ h6 {
   --bone-color: hsl(38, 32%, 85%);
   --bone-darker: hsl(38, 32%, 65%);
   --bone-lighter: hsl(38, 32%, 90%);
+
+  --invalid-red: hsl(0, 54%, 50%);
+  --focus-blue: hsl(224, 70%, 50%);
+
   --content-margin-h: 2rem;
+  --label-size: calc(0.5rem + 0.5vw);
 }
 
 @font-face {
@@ -154,7 +163,8 @@ body {
 }
 
 #content h3 {
-  font-size: calc(0.45rem + 1vw);
+  font-size: calc(0.4rem + 0.8vw);
+  margin-right: 10vw;
 }
 
 #info {
@@ -169,8 +179,77 @@ body {
   background-color: white;
   box-shadow: 0rem 0.7rem 0.3rem -0.5rem hsl(0, 0%, 85%);
   padding: 1rem var(--content-margin-h);
+  display: flex;
+  flex-direction: column;
+  gap: calc(0.5rem + 1vw);
+}
+
+#glory {
+  margin-bottom: 0.5rem;
+}
+
+.form-row {
+  display: flex;
+  gap: calc(2rem + 1vw);
+  margin-top: 0.7rem;
+}
+
+.input-container {
+  position: relative;
+}
+
+#required-notice {
+  font-size: calc(0.7rem + 0.5vw);
+}
+
+label {
+  position: absolute;
+  bottom: 1.6rem;
+  font-family: "norse", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.07rem;
+  font-size: var(--label-size);
+  color: hsl(219, 6%, 49%);
+}
+
+label span {
+  font-size: 1.5rem;
+  position: relative;
+  top: 0.5rem;
+}
+
+input {
+  border: 1px solid hsl(220, 14%, 80%);
+  border-radius: 0.2rem;
+}
+
+input:user-invalid {
+  border: 1px solid var(--invalid-red);
+}
+
+input:focus-visible {
+  border: 0.1rem solid var(--focus-blue);
+  box-shadow: 1px 1px 5px 0px hsl(0, 0%, 65%);
+  outline-color: transparent;
 }
 
 button {
   margin-top: calc(0.75 * var(--content-margin-h));
+  background-color: hsl(237, 61%, 59%);
+  color: white;
+  font-family: "norse";
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 2.5rem;
+}
+
+#submit-container p {
+  margin-top: 1.5rem;
+}
+
+a {
+  color: hsl(237, 61%, 59%);
+  text-decoration: none;
+  font-weight: bold;
 }

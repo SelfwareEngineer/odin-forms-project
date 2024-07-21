@@ -34,53 +34,55 @@
         </h3>
       </div>
       <form id="signup" action="" method="post">
-        <h3>Glory in Valhalla!</h3>
-        <p>Fields with <span aria-label="required">*</span> are required</p>
+        <h3 id="glory">Glory in Valhalla!</h3>
+        <p id="required-notice">
+          Fields with <span aria-label="required">*</span> are required
+        </p>
         <div id="fr1" class="form-row">
           <div class="input-container">
             <label for="first-name"
               >FIRST NAME <span aria-label="required">*</span>
-              <input type="text" id="first-name" required />
             </label>
+            <input type="text" id="first-name" required />
           </div>
           <div class="input-container">
             <label for="last-name"
               >LAST NAME <span aria-label="required">*</span>
-              <input type="text" id="last-name" required />
             </label>
+            <input type="text" id="last-name" required />
           </div>
         </div>
         <div id="fr2" class="form-row">
           <div class="input-container">
             <label for="email"
               >EMAIL <span aria-label="required">*</span>
-              <input type="email" id="email" required />
             </label>
+            <input type="email" id="email" required />
           </div>
           <div class="input-container">
             <label for="phone-number"
               >PHONE NUMBER <span aria-label="required">*</span>
-              <input type="tel" id="phone-number" required />
             </label>
+            <input type="tel" id="phone-number" required />
           </div>
         </div>
         <div id="fr3" class="form-row">
           <div class="input-container">
             <label for="password"
               >PASSWORD <span aria-label="required">*</span>
-              <input type="password" id="password" required />
             </label>
+            <input type="password" id="password" required />
           </div>
           <div class="input-container">
             <label for="confirm-password"
               >CONFIRM PASSWORD <span aria-label="required">*</span>
-              <input type="password" id="confirm-password" required />
             </label>
+            <input type="password" id="confirm-password" required />
           </div>
         </div>
       </form>
       <div id="submit-container">
-        <button type="submit">Make Sacrifice</button>
+        <button type="submit">Submit Tribute</button>
         <p>
           Already pledged?
           <a
